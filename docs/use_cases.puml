@@ -1,0 +1,25 @@
+@startuml
+actor "Пользователь" as User
+package "Игровой процесс" {
+    usecase "Управление персонажем на лодке" as BoatControl
+    usecase "Миниигра ловли рыбы" as Fishing
+    usecase "Открытие инвентаря" as OpenInventory
+}
+
+package "Магазин" {
+    usecase "Продажа рыбы" as SellFish
+    usecase "Покупка улучшений" as BuyUpgrades
+    usecase "Покупка наживки" as BuyBait
+    usecase "Покупка прикорма" as BuyLure
+}
+
+
+User --> BoatControl
+User --> Fishing
+Fishing --> OpenInventory
+User --> SellFish
+User --> BuyUpgrades
+User --> BuyBait
+User --> BuyLure
+User --> OpenInventory
+@enduml
