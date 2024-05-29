@@ -1,0 +1,60 @@
+@startuml Диаграмма классов
+
+class Player {
+    +move(direction: Direction)
+    +collectMoney(money: Money)
+    +collectFish(fish: Fish)
+    +useBait(bait: Bait)
+    +useLure(lure: Lure)
+}
+
+class Boat {
+    +move(direction: Direction)
+    +upgrade(upgrade: Upgrade)
+}
+
+class MiniGame {
+    +display()
+    +moveCursor(direction: Direction)
+    +holdCursor(time: Time)
+    +catchFish(fish: Fish)
+}
+
+class Shop {
+    +display()
+}
+
+class SellFish {
+    +sell(fish: Fish)
+}
+
+class UpgradeBoat {
+    +upgrade(upgrade: Upgrade)
+}
+
+class BuyBait {
+    +buy(bait: Bait)
+}
+
+class BuyLure {
+    +buy(lure: Lure)
+}
+
+class Inventory {
+    +display()
+}
+
+Player --> Boat
+Player ---> MiniGame
+MiniGame --> Inventory
+Player --> Shop
+Player --> Inventory 
+Shop o-- SellFish
+BuyBait --> Inventory
+BuyLure --> Inventory
+UpgradeBoat --> Boat
+Shop o-- UpgradeBoat
+Shop o-- BuyBait
+Shop o-- BuyLure
+
+@enduml

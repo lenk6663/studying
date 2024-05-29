@@ -1,7 +1,8 @@
 # Функциональные модели 
 #### Диаграмма вариантов использования
-* [Оффлайн файл](diagrams/use_cases.puml)
-![Диаграмма вариантов использования](diagrams/use_cases.png)
+* [Оффлайн файл](diagrams/functions/use_cases.puml)
+
+![Диаграмма вариантов использования](diagrams/functions/use_cases.png)
 
 ### Управление персонажем на лодке
 
@@ -22,8 +23,9 @@
 - Приложение выводит сообщение о пойманной рыбе.
 - Приложение закрывает миниигру.
 
-* [Оффлайн файл](diagrams/fishing.puml)
-![Диаграмма активности](diagrams/fishing.png)
+* [Оффлайн файл](diagrams/functions/fishing.puml)
+
+![Диаграмма активности](diagrams/functions/fishing.png)
 
 ### Продажа рыбы
 
@@ -39,8 +41,8 @@
 - Пользователь нажимает кнопку Esc или кнопку Е.
 - Приложение закрывает магазин.
 
-* [Оффлайн файл](diagrams/sellfish.puml)
-![Диаграмма активности](diagrams/sellfish.png)
+* [Оффлайн файл](diagrams/functions/sellfish.puml)
+![Диаграмма активности](diagrams/functions/sellfish.png)
 
 ### Покупка улучшений
 
@@ -52,8 +54,8 @@
 - Приложение производит улучшение (при наличии достаточного количества монет).
 - Приложение выводит сообщение об улучшении.
 
-* [Оффлайн файл](diagrams/buyupgrates.puml)
-![Диаграмма активности](diagrams/buyupgrates.png)
+* [Оффлайн файл](diagrams/functions/buyupgrates.puml)
+![Диаграмма активности](diagrams/functions/buyupgrates.png)
 
 ### Покупка наживки
 
@@ -65,8 +67,8 @@
 - Приложение выводит сообщение о покупке (при наличии достаточного количества монет).
 - Приложение добавляет наживку в инвентарь игрока.
 
-* [Оффлайн файл](diagrams/buybait.puml)
-![Диаграмма активности](diagrams/buybait.png)
+* [Оффлайн файл](diagrams/functions/buybait.puml)
+![Диаграмма активности](diagrams/functions/buybait.png)
 
 ### Покупка прикорма
 
@@ -78,8 +80,8 @@
 - Приложение выводит сообщение о покупке (при наличии достаточного количества монет).
 - Приложение добавляет прикорм в инвентарь игрока.
 
-* [Оффлайн файл](diagrams/buylure.puml)
-![Диаграмма активности](diagrams/buylure.png)
+* [Оффлайн файл](diagrams/functions/buylure.puml)
+![Диаграмма активности](diagrams/functions/buylure.png)
 
 ### Открытие инвентаря
 

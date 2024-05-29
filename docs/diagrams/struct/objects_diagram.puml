@@ -1,0 +1,40 @@
+@startuml Диаграмма объектов
+object Player {
+    + movePlayer(direction: Direction)
+    + collectMoney(money: Money)
+    + collectFish(fish: Fish)
+    + useBait(bait: Bait)
+    + useLure(lure: Lure)
+}
+
+object Boat {
+    + moveBoat(direction: Direction)
+    + upgradeBoat(upgrade: Upgrade)
+}
+
+object MiniGame {
+    + display()
+    + moveCursor(direction: Direction)
+    + holdCursor(time: Time)
+    + catchFish(fish: Fish)
+}
+
+object Shop {
+    + display()
+    + sellFish(fish: Fish)
+    + buyBait(bait: Bait)
+    + buyLure(lure: Lure)
+    + upgradeBoat(upgrade: Upgrade)
+}
+
+object Inventory {
+    + display()
+}
+
+Player -up- Boat
+Player -up- MiniGame
+MiniGame -up- Inventory
+Player -up- Shop
+Player -up- Inventory
+
+@enduml
