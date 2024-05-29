@@ -1,4 +1,4 @@
-@startuml
+@startuml Диаграмма вариантов использования
 actor "Пользователь" as User
 package "Игровой процесс" {
     usecase "Управление персонажем на лодке" as Movement
