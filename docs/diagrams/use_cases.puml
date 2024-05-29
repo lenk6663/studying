@@ -1,7 +1,7 @@
 @startuml
 actor "Пользователь" as User
 package "Игровой процесс" {
-    usecase "Управление персонажем на лодке" as BoatControl
+    usecase "Управление персонажем на лодке" as Movement
     usecase "Миниигра ловли рыбы" as Fishing
     usecase "Открытие инвентаря" as OpenInventory
 }
@@ -14,7 +14,7 @@ package "Магазин" {
 }
 
 
-User --> BoatControl
+User --> Movement
 User --> Fishing
 Fishing --> OpenInventory
 User --> SellFish
