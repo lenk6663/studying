@@ -110,8 +110,8 @@ Bait --|> Object
 Money --|> Object
 Fish --> MiniGame
 Player --> Boat
-Player ---> MiniGame
-MiniGame --> Inventory : Play
+Player ---> MiniGame : Play
+MiniGame --> Inventory 
 Player --> Shop : Open
 Player --> Island : Open
 Shop o-- SellFish
