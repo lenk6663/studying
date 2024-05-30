@@ -7,13 +7,16 @@ class Player {
 
 class Inventory {
     +display()
-    -contents: List<Item>
-    +add(object: Object)
-    +del(object: Object)
+    -contents: Set<Money, Lure, Bait>
+    -fish_list: List<Fish>
+    +add(fish: Fish)
+    +del(fish: Fish)
 }
 
 class Object {
-    -amount: int
+    - amount: int
+    + increase_amount(amount)
+    + reduce_amount(amount)
     + display(surface: Coordinates: Coordinates, size, amount)
 }
 
@@ -21,9 +24,12 @@ class Money {}
 
 class Fish {
     -position: Coordinates
-    -speed: float
-    -type: str
     +draw(surface: Coordinates, size)
+}
+class Fishtype {
+    -type: str
+    -speed: float
+    -price: int
 }
 
 class Lure {
@@ -87,7 +93,7 @@ class UpgradeBoat {
     +upgrade(boat: Boat)
 }
 
-class UpgrateRod {
+class UpgradeRod {
     +upgrate(rod: Rod)
 }
 
@@ -103,7 +109,7 @@ class BuyLure {
 
 Player --> Inventory : Open
 Inventory --> Object
-Fish --|> Object
+Inventory --> Fish
 Lure --|> Object
 Rod --|> Object
 Bait --|> Object
@@ -114,13 +120,15 @@ Player ---> MiniGame : Play
 MiniGame --> Inventory 
 Player --> Shop : Open
 Player --> Island : Open
+Fishtype --> Fish
 Shop o-- SellFish
 BuyBait --> Inventory
 BuyLure --> Inventory
 SellFish --> Inventory
 UpgradeBoat --> Boat
-UpgrateRod --> Rod
+UpgradeRod --> Rod
 Shop o-- UpgradeBoat
+Shop o-- UpgradeRod
 Shop o-- BuyBait
 Shop o-- BuyLure
 Island o-- SellFish
