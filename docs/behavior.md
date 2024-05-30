@@ -78,7 +78,7 @@
 
 ### Диаграмма последовательности
 
-* [Оффлайн файл](diagrams/behavior/sequence_diagram.puml.puml)
+* [Оффлайн файл](diagrams/behavior/sequence_diagram.puml)
 
 ![Диаграмма последовательности](diagrams/behavior/sequence_diagram.png)
 
