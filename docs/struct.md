@@ -1,6 +1,7 @@
 # Структурные модели
 ### Описание внутренней структуры приложения
 * [Оффлайн файл](diagrams/struct/class_diagram.puml)
+
 ![Диаграмма классов](diagrams/struct/class_diagram.png)
 
 #### Классы:
@@ -26,6 +27,7 @@
 
 ### Описание используемых структур/объектов данных
 * [Оффлайн файл](diagrams/struct/objects_diagram.puml)
+
 ![Диаграмма классов](diagrams/struct/objects_diagram.png)
 
 #### Объекты:

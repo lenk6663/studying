@@ -42,6 +42,7 @@
 - Приложение закрывает магазин.
 
 * [Оффлайн файл](diagrams/functions/sellfish.puml)
+
 ![Диаграмма активности](diagrams/functions/sellfish.png)
 
 ### Покупка улучшений
@@ -55,6 +56,7 @@
 - Приложение выводит сообщение об улучшении.
 
 * [Оффлайн файл](diagrams/functions/buyupgrates.puml)
+
 ![Диаграмма активности](diagrams/functions/buyupgrates.png)
 
 ### Покупка наживки
@@ -68,6 +70,7 @@
 - Приложение добавляет наживку в инвентарь игрока.
 
 * [Оффлайн файл](diagrams/functions/buybait.puml)
+
 ![Диаграмма активности](diagrams/functions/buybait.png)
 
 ### Покупка прикорма
@@ -81,6 +84,7 @@
 - Приложение добавляет прикорм в инвентарь игрока.
 
 * [Оффлайн файл](diagrams/functions/buylure.puml)
+
 ![Диаграмма активности](diagrams/functions/buylure.png)
 
 ### Открытие инвентаря
