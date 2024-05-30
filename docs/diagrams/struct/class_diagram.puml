@@ -1,27 +1,82 @@
 @startuml Диаграмма классов
 
 class Player {
-    +move(direction: Direction)
-    +collectMoney(money: Money)
-    +collectFish(fish: Fish)
-    +useBait(bait: Bait)
-    +useLure(lure: Lure)
+    -position: Coordinates
+    +move(direction: Direction, coordinates: Coordinates)
+}
+
+class Inventory {
+    +display()
+    -contents: List<Item>
+    +add(object: Object)
+    +del(object: Object)
+}
+
+class Object {
+    -amount: int
+    + display(surface: Coordinates: Coordinates, size, amount)
+}
+
+class Money {}
+
+class Fish {
+    -position: Coordinates
+    -speed: float
+    -type: str
+    +draw(surface: Coordinates, size)
+}
+
+class Lure {
+    +useTime
+    -buff: float
+}
+
+class Bait {
+    -buff: float
+}
+
+class Coordinates {
+    -x: float
+    -y: float
+}
+
+class Direction {
+    -UP: float
+    -DOWN: float
+    -LEFT: float
+    -RIGHT: float
 }
 
 class Boat {
-    +move(direction: Direction)
-    +upgrade(upgrade: Upgrade)
+    -speed: float
+    +draw(surface: Coordinates, size)
+}
+
+class Rod {
+    -level: float
+    +displayLvl(surface: Coordinates, size, level)
 }
 
 class MiniGame {
+    -position: Coordinates
     +display()
+    +moveFish(fish: Fish, direction: Direction, coordinates: Coordinates)
     +moveCursor(direction: Direction)
     +holdCursor(time: Time)
     +catchFish(fish: Fish)
+    +useBait(bait: Bait)
 }
 
 class Shop {
+    -position: Coordinates
     +display()
+    +draw(surface: Coordinates, size)
+}
+
+class Island {
+    -position: Coordinates
+    +display()
+    +draw(surface: Coordinates, size)
 }
 
 class SellFish {
@@ -29,7 +84,11 @@ class SellFish {
 }
 
 class UpgradeBoat {
-    +upgrade(upgrade: Upgrade)
+    +upgrade(boat: Boat)
+}
+
+class UpgrateRod {
+    +upgrate(rod: Rod)
 }
 
 class BuyBait {
@@ -40,21 +99,30 @@ class BuyLure {
     +buy(lure: Lure)
 }
 
-class Inventory {
-    +display()
-}
 
+
+Player --> Inventory : Open
+Inventory --> Object
+Fish --|> Object
+Lure --|> Object
+Rod --|> Object
+Bait --|> Object
+Money --|> Object
+Fish --> MiniGame
 Player --> Boat
 Player ---> MiniGame
-MiniGame --> Inventory
-Player --> Shop
-Player --> Inventory 
+MiniGame --> Inventory : Play
+Player --> Shop : Open
+Player --> Island : Open
 Shop o-- SellFish
 BuyBait --> Inventory
 BuyLure --> Inventory
+SellFish --> Inventory
 UpgradeBoat --> Boat
+UpgrateRod --> Rod
 Shop o-- UpgradeBoat
 Shop o-- BuyBait
 Shop o-- BuyLure
+Island o-- SellFish
 
 @enduml
