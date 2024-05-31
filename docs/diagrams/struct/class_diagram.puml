@@ -109,19 +109,16 @@ class BuyLure {
 
 Player --> Inventory : Open
 Inventory --> Object
-Inventory --> Fish
+Inventory <-- Fish
 Lure --|> Object
-Rod --|> Object
 Bait --|> Object
 Money --|> Object
 Fish --> MiniGame
 Player --> Boat
 Player ---> MiniGame : Play
 MiniGame --> Inventory 
-Player --> Shop : Open
 Player --> Island : Open
 Fishtype --> Fish
-Shop o-- SellFish
 BuyBait --> Inventory
 BuyLure --> Inventory
 SellFish --> Inventory
@@ -131,6 +128,7 @@ Shop o-- UpgradeBoat
 Shop o-- UpgradeRod
 Shop o-- BuyBait
 Shop o-- BuyLure
+Shop --|> Island
 Island o-- SellFish
 
 @enduml
