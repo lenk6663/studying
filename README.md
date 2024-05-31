@@ -28,6 +28,7 @@
 * [**Функциональные модели**](docs/functions.md)
 * [**Структурные модели**](docs/struct.md)
 * [**Поведенческие модели**](docs/behavior.md)
+* [**Перечень тестов**](tests/descriptions.md)
 
 ## Автор
 
