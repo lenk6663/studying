@@ -68,7 +68,7 @@ class MiniGame {
     +display()
     +moveFish(fish: Fish, direction: Direction, coordinates: Coordinates)
     +moveCursor(direction: Direction)
-    +holdCursor(time: Time)
+    +holdCursor(rod: Rod)
     +catchFish(fish: Fish)
     +useBait(bait: Bait)
 }
@@ -107,13 +107,13 @@ class BuyLure {
 
 
 
-Player --> Inventory : Open
+Player -> Inventory : Open
 Inventory --> Object
-Inventory <-- Fish
+Inventory --> Fish
 Lure --|> Object
 Bait --|> Object
 Money --|> Object
-Fish --> MiniGame
+Fish <-- MiniGame
 Player --> Boat
 Player ---> MiniGame : Play
 MiniGame --> Inventory 
@@ -121,7 +121,7 @@ Player --> Island : Open
 Fishtype --> Fish
 BuyBait --> Inventory
 BuyLure --> Inventory
-SellFish --> Inventory
+SellFish <-- Inventory
 UpgradeBoat --> Boat
 UpgradeRod --> Rod
 Shop o-- UpgradeBoat
