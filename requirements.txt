@@ -1,0 +1,6 @@
+pygame
+enum
+math
+random
+typing
+pytest
