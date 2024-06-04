@@ -1,3 +1,6 @@
+[![CI/CD GitHub Actions](https://github.com/lenk6663/studying/actions/workflows/main.yml/badge.svg)](https://github.com/lenk6663/studying/actions/workflows/main.yml)
+[![Coverage Status](https://coveralls.io/repos/github/lenk6663/studying/badge.svg?branch=main)](https://coveralls.io/github/lenk6663/studying?branch=main)
+
 # Catch of the Day
 — это расслабляющая игра о рыбалке.
 
