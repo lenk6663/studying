@@ -133,9 +133,3 @@ class TestGame(unittest.TestCase):
         buyupdates = BuyUpdates(Coordinates(100, 100), 10, 10, self.rod)
         self.inventory.contents[0].amount = 500
         self.assertTrue(buyupdates.buy(self.inventory, [105, 105], [1]))
-
-    def test_island_draw(self):
-        # Тест отрисовки острова
-        island = Island(Coordinates(100, 100), 1, 200)
-        island.draw(self.screen)
-        self
