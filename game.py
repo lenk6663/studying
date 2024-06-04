@@ -2,7 +2,7 @@ import pygame
 from enum import Enum
 import math
 import random
-from typing import List, Set
+
 
 pygame.init()
 
