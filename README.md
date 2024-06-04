@@ -1,5 +1,8 @@
 [![CI/CD GitHub Actions](https://github.com/lenk6663/studying/actions/workflows/main.yml/badge.svg)](https://github.com/lenk6663/studying/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/lenk6663/studying/badge.svg?branch=main)](https://coveralls.io/github/lenk6663/studying?branch=main)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lenk6663_studying&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=lenk6663_studying)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=lenk6663_studying&metric=bugs)](https://sonarcloud.io/summary/new_code?id=lenk6663_studying)
+[![Code smells](https://sonarcloud.io/api/project_badges/measure?project=lenk6663_studying&metric=code_smells)](https://sonarcloud.io/dashboard?id=lenk6663_studying)
 
 # Catch of the Day
 — это расслабляющая игра о рыбалке.
